@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView _welcomeLabel;
     private Button _btnClickMe;
     private EditText _userInputTextBox;
-//overriding the oncreate
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//some changes...
+
         //create a reference/binding to the textview control
         this._welcomeLabel = (TextView) findViewById(R.id.lblWelcome);
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 _welcomeLabel.setText(getString(R.string.welcome_string));
             }
         });
-//override for textbox
+
         this._userInputTextBox.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
